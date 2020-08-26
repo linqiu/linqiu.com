@@ -1,3 +1,5 @@
+import styles from '../styles/Home.module.css'
+
 import Head from 'next/head'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
@@ -16,7 +18,6 @@ export default function Home() {
         <meta property="og:title" content="Lin Qiu's Personal Site" key="title" />
         <meta property="description" content={`Lin Qiu is a software engineer with over ${expInYears} years of experience in the DC startup scene.`} />
       </Head>
-
       <Grid container spacing={2} direction="column" justify="center" alignItems="center">
         <Grid item xs={12}>
           <a href="https://linqiu.com"><img src="/me.png" /></a>
@@ -26,13 +27,13 @@ export default function Home() {
         </Grid>
 
         <Grid item xs={12} container direction="row" justify="center" alignItems="center">
-          <a href="https://github.com/linqiu" title="Github"><GitHubIcon fontSize="large" /></a>
-          <a href="https://twitter.com/linqiu" title="Twitter"><TwitterIcon fontSize="large" /></a>
+          <a href="https://github.com/linqiu" title="Github"><GitHubIcon fontSize="large" className={styles.links} /></a>
+          <a href="https://twitter.com/linqiu" title="Twitter"><TwitterIcon fontSize="large" className={styles.links} /></a>
           <a href="https://docs.google.com/document/d/e/2PACX-1vRr-QzAgzWDgSkecIPtmoFdUry5sjQTsUgZQRnvoDHPJUk4K9S0Vm3Xci3CMHTmfj4mwa5zhtQpAkd5/pub" title="Resume">
-            <DescriptionIcon fontSize="large" />
+            <DescriptionIcon fontSize="large" className={styles.links} />
           </a>
-          <a href="mailto:theonlylinqiu@gmail.com" title="Email"><EmailIcon fontSize="large" /></a>
-          <a href="https://www.linkedin.com/in/theonlylinqiu" title="LinkedIn"><LinkedInIcon fontSize="large" /></a>
+          <a href="mailto:theonlylinqiu@gmail.com" title="Email"><EmailIcon fontSize="large" className={styles.links} /></a>
+          <a href="https://www.linkedin.com/in/theonlylinqiu" title="LinkedIn"><LinkedInIcon fontSize="large" className={styles.links} /></a>
         </Grid>
       </Grid>
     </div>
