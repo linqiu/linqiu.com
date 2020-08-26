@@ -19,7 +19,7 @@ export default function Home() {
 
       <Grid container spacing={2} direction="column" justify="center" alignItems="center">
         <Grid item xs={12}>
-          <a href="http://linqiu.com"><img src="/me.png" /></a>
+          <a href="https://linqiu.com"><img src="/me.png" /></a>
         </Grid>
         <Grid item xs={12} container direction="column" justify="center" alignItems="center">
           I am a software engineer with over {expInYears} years of experience in the startup scene. I taught David Hasselhoff Chinese once.
