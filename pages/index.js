@@ -1,65 +1,40 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import TwitterIcon from '@material-ui/icons/Twitter'
+import EmailIcon from '@material-ui/icons/Email'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import DescriptionIcon from '@material-ui/icons/Description'
+
+import Grid from '@material-ui/core/Grid'
 
 export default function Home() {
+  const expInYears = (new Date()).getFullYear() - 2010
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Lin Qiu's Personal Site</title>
+        <meta property="og:title" content="Lin Qiu's Personal Site" key="title" />
+        <meta property="description" content={`Lin Qiu is a software engineer with over ${expInYears} years of experience in the DC startup scene.`} />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <Grid container spacing={2} direction="column" justify="center" alignItems="center">
+        <Grid item xs={12}>
+          <a href="http://linqiu.com"><img src="/me.png" /></a>
+        </Grid>
+        <Grid item xs={12} container direction="column" justify="center" alignItems="center">
+          I am a software engineer with over {expInYears} years of experience in the startup scene. I taught David Hasselhoff Chinese once.
+        </Grid>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+        <Grid item xs={12} container direction="row" justify="center" alignItems="center">
+          <a href="https://github.com/linqiu" title="Github"><GitHubIcon fontSize="large" /></a>
+          <a href="https://twitter.com/linqiu" title="Twitter"><TwitterIcon fontSize="large" /></a>
+          <a href="https://docs.google.com/document/d/e/2PACX-1vRr-QzAgzWDgSkecIPtmoFdUry5sjQTsUgZQRnvoDHPJUk4K9S0Vm3Xci3CMHTmfj4mwa5zhtQpAkd5/pub" title="Resume">
+            <DescriptionIcon fontSize="large" />
           </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+          <a href="mailto:theonlylinqiu@gmail.com" title="Email"><EmailIcon fontSize="large" /></a>
+          <a href="https://www.linkedin.com/in/theonlylinqiu" title="LinkedIn"><LinkedInIcon fontSize="large" /></a>
+        </Grid>
+      </Grid>
     </div>
   )
 }
