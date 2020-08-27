@@ -17,14 +17,14 @@ export default function Home() {
         <title>Lin Qiu's Personal Site</title>
         <meta property="og:title" content={`Software Engineer with over ${expInYears} years of Experience in startups`} key="title" />
         <meta name="description" property="description" content={`Lin Qiu is a software engineer with over ${expInYears} years of experience in the DC startup scene.`} />
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="keywords" content="Engineer, Ruby, Typescript, HTML, CSS, JavaScript" />
         <meta name="author" content="Lin Qiu" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Grid container spacing={2} direction="column" justify="center" alignItems="center">
         <Grid item xs={12}>
-          <a href="https://www.linqiu.com"><img src="/me.png" alt="this is my face"/></a>
+          <a href="https://www.linqiu.com"><img src="/me.jpg" alt="this is my face"/></a>
         </Grid>
         <Grid item xs={12} container direction="column" justify="center" alignItems="center">
           <h1>About me</h1>
